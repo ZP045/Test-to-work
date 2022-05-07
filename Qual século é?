@@ -16,7 +16,7 @@ function centuryFromYear(year) {
     else if (year >= 1001 || year <= 1100)return "século 11";
     else if (year >= 1101 || year <= 1200)return "século 12";
 
-    else if (year >= 1201 || year <= 1300)return " século 13";
+    else if (year >= 1201 || year <= 1300)return "século 13";
     else if (year >= 1301 || year <= 1400)return "século 14";
     else if (year >= 1401 || year <= 1500)return "século 15";
     else if (year >= 1501 || year <= 1600)return "século 16";
