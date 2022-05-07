@@ -1,0 +1,22 @@
+<?php
+function primosE($num_verif) {
+    $j =30;
+    while ($j <= $num_verif ) {
+        $i = 2;
+        $primo = 1;
+        while ($i < $j) {
+            if ($j % $i == 0) {
+                $primo = 0;
+                break;
+            }
+            $i ++;
+        }
+        if ($primo) {
+            print  $j . '<br>';
+        }
+        $j ++;
+    }
+}
+$num = $_GET ['num'];
+primosE($num);
+?>
