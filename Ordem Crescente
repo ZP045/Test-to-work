@@ -1,0 +1,18 @@
+<?php 
+function AscSort($item1,$item2)
+{
+    if ($item1['marks'] == $item2['marks']) return 0;
+    return ($item1['marks'] > $item2['marks']) ? 1 : -1;
+}
+$result = array(
+
+   array("firstname"=>"Abóbora", "marks"=>85),
+   array("firstname"=>"Abobrinha", "marks"=>60),
+   array("firstname"=>"Abacate", "marks"=>100),
+   array("firstname"=>"Café", "marks"=>40),
+   array("firstname"=>"Uva", "marks"=>30),
+   array("firstname"=>"Maçã", "marks"=>70),
+);
+usort($result,'AscSort');
+print_r($result);
+?>
