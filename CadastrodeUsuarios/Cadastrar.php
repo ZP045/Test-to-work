@@ -17,11 +17,13 @@ elseif (empty($dados['telefone'])) {
 }
 }
 else {
-  $query_usuario = "INSERT INTO usuarios (nome, email, cpf, telefone) VALUES (:nome, :email, :cpf, :telefone)";
+  $query_usuario = "INSERT INTO usuarios (nome, email, email, cpf, telefone, telefone) VALUES (:nome, :email, :email, :cpf, :telefone, :telefone)";
   $cad_usuario = $cann-> prepare($query_usuario);
   $cad_usuário->binParam(':nome', $dados['nome']);
   $cad_usuário->binParam(':email', $dados['email']);
+  $cad_usuário->binParam(':email', $dados['email']);
   $cad_usuário->binParam(':cpf', $dados['cpf']);
+  $cad_usuário->binParam(':telefone', $dados['telefone']);
   $cad_usuário->binParam(':telefone', $dados['telefone']);
   $cad_usuario->execute();
 
