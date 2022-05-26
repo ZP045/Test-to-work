@@ -113,22 +113,27 @@ class MainWindow(MainWindowUI, MainWindowBase):
 
 
 
-if(MainWindowUI_true):
-def createNewWindow():
-    newWindow = tk.Toplevel(app)
-    labelNew = tk.Label(newWindow, text = "New Window")
-    buttonNew = tk.Button(newWindow, text = "New Window button")
+#def on_MainWindow_clicked():
+            
+custom_menu = QToolButton(dock_area)
+        custom_menu.setToolTip("Create NewWindow")
+  
+        custom_menu.setAutoRaise(True)
+        
+        title_bar = dock_area.titleBar()
+        index = title_bar.indexOf(title_bar.tabBar())
+        title_bar.insertWidget(index + 1, custom_menu)
+        def on_menu_clicked():
+            dock_widget = self.create_newwindow_widget()
+            dock_widget.setFeature(QtAds.CDockWidget.DockWidgetDeleteOnClose, True)
+            self.dock_manager.addDockWidgetTabToArea(dock_widget, dock_area)
+            dock_widget.closeRequested.connect(self.on_newwindow_close_requested)
+        custom_menu.clicked.connect(on_menu_clicked)
 
-    labelNew.pack()
-    buttonNew.pack()
 
-app = tk.Tk()
-buttonNew = tk.Button(app, 
-              text="Create new window",
-              command=createNewWindow)
-buttonNew.pack()
 
-app.mainloop()
+#if_MainWindowUI_true:
+#def createNewWindow():
 
 
 
