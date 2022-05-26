@@ -2,6 +2,7 @@ import datetime
 import logging
 import os
 import sys
+import tkinter as tk
 
 from PyQt5 import uic
 from PyQt5.QtCore import (QCoreApplication, QDir, Qt, QSettings, QSignalBlocker,
@@ -109,6 +110,30 @@ class MainWindow(MainWindowUI, MainWindowBase):
 
         self.setupUi(self)
         self.create_actions()
+
+
+
+if(MainWindowUI_true):
+def createNewWindow():
+    newWindow = tk.Toplevel(app)
+    labelNew = tk.Label(newWindow, text = "New Window")
+    buttonNew = tk.Button(newWindow, text = "New Window button")
+
+    labelNew.pack()
+    buttonNew.pack()
+
+app = tk.Tk()
+buttonNew = tk.Button(app, 
+              text="Create new window",
+              command=createNewWindow)
+buttonNew.pack()
+
+app.mainloop()
+
+
+
+
+
         
         # uncomment the following line if the tab close button should be
         # a QToolButton instead of a QPushButton
