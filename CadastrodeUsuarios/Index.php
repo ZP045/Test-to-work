@@ -52,10 +52,20 @@ include_once "conexao.php";
                         <label for="email" class="com-form-label">E-mail:</label> 
                         <input type="text" name="email" class="form-control" id="email" placeholder="Digite o seu e-mail" required>
 </div>
+<div class= "mb-3">
+                        <label for="email" class="com-form-label">E-mail:</label> 
+</div>
   <div class= "mb-3">
                         <label for="cpf" class="com-form-label">CPF:</label> 
                         <input type="text" name="cpf" class="form-control" id="cpf" placeholder="Digite o seu CPF" required>
-</div>                      
+</div>  
+    <div class= "mb-3">
+                        <label for="telefone" class="com-form-label">Telefone:</label> 
+                        <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Digite o seu número de telefone" required>
+</div>
+       <div class= "mb-3">
+                        <label for="telefone" class="com-form-label">Telefone:</label> 
+</div>         
              <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-bs-dismis="modal">Fechar</button>
                  <input type="submit" class="btn btn--outline-success btn-sm" id="cad-usuario-btn" value="Cadastrar" />
