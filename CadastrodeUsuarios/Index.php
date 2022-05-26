@@ -54,7 +54,7 @@ include_once "conexao.php";
 </div>
          <div class= "mb-3">
                         <label for="email" class="com-form-label">E-mail:</label> 
-                        <input type="text" name="email" class="form-control" id="email" placeholder="Digite o seu segundo E-mail(opcional)" required>
+                        <input type="text" name="email" class="form-control" id="email" placeholder="Opcional">
 
 </div>
         <div class= "mb-3">
@@ -66,8 +66,8 @@ include_once "conexao.php";
                         <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Digite o seu número de telefone" required>
 </div>
        <div class= "mb-3">
-                        <label for="telefone" class="com-form-label">Telefone:</label> 
-                        <input type="telefone" name="telefone" class="form-control" id="telefone" placeholder="Digite o seu segundo número(opcional)" required>
+                        <label for="celular" class="com-form-label">Celular:</label> 
+                        <input type="celular" name="celular" class="form-control" id="celular" placeholder="Opcional">
 </div>         
              <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-bs-dismis="modal">Fechar</button>
