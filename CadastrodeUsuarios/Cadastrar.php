@@ -21,9 +21,7 @@ else {
   $cad_usuario = $cann-> prepare($query_usuario);
   $cad_usuário->binParam(':nome', $dados['nome']);
   $cad_usuário->binParam(':email', $dados['email']);
-  $cad_usuário->binParam(':email', $dados['email']);
   $cad_usuário->binParam(':cpf', $dados['cpf']);
-  $cad_usuário->binParam(':telefone', $dados['telefone']);
   $cad_usuário->binParam(':telefone', $dados['telefone']);
   $cad_usuario->execute();
 
